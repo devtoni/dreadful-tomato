@@ -12,7 +12,8 @@ type Props = {
 
 function Header({ children }: Props) {
   return (
-    <div className="bx--grid header">
+    <header className="header">
+      <div className="bx--grid">
       <div className="bx--row ">
         <div className="bx--col header__section">
           <h1>
@@ -35,7 +36,8 @@ function Header({ children }: Props) {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </header>
   );
 }
 

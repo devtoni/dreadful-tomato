@@ -14,25 +14,27 @@ const Series = React.lazy(
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route
-        path="movies"
-        element={
-          <Suspense fallback={'...loading'}>
-            <Movies />
-          </Suspense>
-        }
-      />
-      <Route
-        path="series"
-        element={
-          <Suspense fallback={'...loading'}>
-            <Series />
-          </Suspense>
-        }
-      />
-    </Routes>
+    <div className="app">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="movies"
+          element={
+            <Suspense fallback={'...loading'}>
+              <Movies />
+            </Suspense>
+          }
+        />
+        <Route
+          path="series"
+          element={
+            <Suspense fallback={'...loading'}>
+              <Series />
+            </Suspense>
+          }
+        />
+      </Routes>
+    </div>
   );
 }
 
