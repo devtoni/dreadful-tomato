@@ -1,21 +1,11 @@
+@import 'reset';
 @import 'globals/index';
-
-html {
-  box-sizing: border-box;
-}
-
-*::before,
-*::after {
-  box-sizing: inherit;
-}
 
 body {
   font-family: $font-family;
   font-size: $font-size;
   font-weight: $font-weight;
   line-height: 1.5;
-}
-
-h1 {
-    color: $red-00;
+  background-color: $black-00;
+  color: $white-00;
 }
