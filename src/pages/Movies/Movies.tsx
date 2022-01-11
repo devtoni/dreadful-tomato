@@ -1,5 +1,13 @@
+import Header from "../../components/Header/Header";
+
 function Movies() {
-  return <h1>This is the movies home page</h1>;
+  return (
+    <>
+      <Header>
+        <Header.Navigation />
+      </Header>
+    </>
+  );
 }
 
 export default Movies;

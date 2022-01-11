@@ -1,5 +1,13 @@
+import Header from '../../components/Header/Header';
+
 function Series() {
-  return <h1>This is the series home page</h1>;
+  return (
+    <>
+      <Header>
+        <Header.Navigation />
+      </Header>
+    </>
+  );
 }
 
 export default Series;

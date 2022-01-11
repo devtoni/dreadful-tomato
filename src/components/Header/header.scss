@@ -1,0 +1,32 @@
+@import '../../scss/globals';
+
+.header {
+  max-height: 50px;
+
+  &__section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & > div {
+      width: 100%;
+    }
+  }
+
+  button {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & img {
+      margin-left: 0.5rem;
+    }
+  }
+
+  &__cta-start-free-trial {
+    background-color: $red-00;
+    border-radius: 16px;
+  }
+}

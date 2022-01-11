@@ -1,6 +1,18 @@
 @import 'reset';
 @import 'globals/index';
 
+$feature-flags: (
+  grid-columns-16: true,
+);
+
+// import carbon/styles grid
+@import 'carbon-components/scss/globals/grid/grid';
+
+html {
+  height: 100%;
+}
+
+
 body {
   font-family: $font-family;
   font-size: $font-size;
@@ -8,4 +20,5 @@ body {
   line-height: 1.5;
   background-color: $black-00;
   color: $white-00;
+  min-height: 100%;
 }
