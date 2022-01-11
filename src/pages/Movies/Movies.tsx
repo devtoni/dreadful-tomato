@@ -1,4 +1,5 @@
-import Header from "../../components/Header/Header";
+import Footer from '../../components/Footer/Footer';
+import Header from '../../components/Header/Header';
 
 function Movies() {
   return (
@@ -6,6 +7,7 @@ function Movies() {
       <Header>
         <Header.Navigation />
       </Header>
+      <Footer />
     </>
   );
 }

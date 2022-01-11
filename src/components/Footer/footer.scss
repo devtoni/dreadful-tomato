@@ -1,0 +1,28 @@
+@import '../../scss/globals';
+
+.footer {
+    margin: 0 auto;
+    width: 50%;
+    font-size: 0.8rem;
+
+    &__section {
+        display: flex;
+        justify-content: center;
+        margin-top: 0.5rem;
+
+        &-list {
+            display: flex;
+            flex: 1;
+            justify-content: space-around;
+            
+            a {
+                color: $white-00;
+            }
+        }
+
+        img {
+            margin-left: 0.5rem;
+        }
+    }
+}
+
