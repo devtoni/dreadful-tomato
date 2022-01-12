@@ -1,0 +1,53 @@
+@import '../../scss/globals';
+
+.date-year-picker{
+  width: auto;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & svg {
+      cursor: pointer;
+    }
+  }
+
+  input {
+    border-radius: 1rem;
+    border: none;
+    height: 2rem;
+    padding: 0 2rem;
+    text-align: center;
+  }
+}
+
+// overwrite react-datepicker classes
+
+.react-datepicker__year {
+  margin: 0;
+}
+
+.react-datepicker__year-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: fit-content;
+
+  & > div {
+    margin: 0;
+    padding: 1rem;
+
+    &:hover {
+      color: $white-00;
+      background-color: $red-00;
+    }
+  }
+}
+
+.react-datepicker__header.react-datepicker__header--custom,
+.react-datepicker__year-text--selected,
+.react-datepicker__year-text--keyboard-selected {
+  background-color: $red-00;
+  color: $white-00;
+  font-weight: 700;
+}
