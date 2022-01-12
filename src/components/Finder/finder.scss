@@ -1,0 +1,19 @@
+@import '../../scss/globals';
+
+.finder {
+  background-color: $red-00;
+  padding: 0.5rem 0;
+
+  &__search {
+    flex: 2;
+    margin-right: 1rem;
+  }
+
+  input {
+    border-radius: 1rem;
+    border: none;
+    height: 2rem;
+    padding: 0 2rem;
+  }
+}
+
