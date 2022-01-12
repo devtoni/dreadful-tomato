@@ -1,4 +1,4 @@
-import { render, screen, within } from '../../../../test/test-utils';
+import { render, screen, within } from '../../../../testUtils';
 
 import Navigation from '../Navigation';
 
