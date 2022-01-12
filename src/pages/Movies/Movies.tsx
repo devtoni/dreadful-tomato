@@ -1,14 +1,18 @@
 import Finder from '../../components/Finder/Finder';
 import { useContentManagerContext } from '../../context/ContentManagerContext';
+import GridContent from '../../components/GridContent/GridContent';
 
 function Movies() {
-  const { content } = useContentManagerContext();
-
-  console.log({ contentFromMovies: content });
+  const { updateFilteredContent, contentLoaded } = useContentManagerContext();
 
   return (
     <>
-      <Finder />
+      <Finder
+        handleSearch={(searchByTitle, releaseYear) =>
+          updateFilteredContent({ programType: 'movie', searchByTitle, releaseYear })
+        }
+      />
+      <main className="bx--grid">{contentLoaded && <GridContent programType="series" title="Popular Movies" />}</main>
     </>
   );
 }
