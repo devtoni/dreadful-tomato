@@ -12,4 +12,4 @@ type MediaContent = {
   releaseYear: number;
 };
 
-export type { MediaContent };
+export type { MediaContent, ProgramTypeContent };
