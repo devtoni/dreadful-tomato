@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { ContentManagerProvider } from './context/ContentManagerContext';
 import Home from './pages/Home/Home';
 
 import './scss/site.scss';
@@ -15,25 +16,27 @@ const Series = React.lazy(
 function App() {
   return (
     <div className="app">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route
-          path="movies"
-          element={
-            <Suspense fallback={'...loading'}>
-              <Movies />
-            </Suspense>
-          }
-        />
-        <Route
-          path="series"
-          element={
-            <Suspense fallback={'...loading'}>
-              <Series />
-            </Suspense>
-          }
-        />
-      </Routes>
+      <ContentManagerProvider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route
+            path="movies"
+            element={
+              <Suspense fallback={'...loading'}>
+                <Movies />
+              </Suspense>
+            }
+          />
+          <Route
+            path="series"
+            element={
+              <Suspense fallback={'...loading'}>
+                <Series />
+              </Suspense>
+            }
+          />
+        </Routes>
+      </ContentManagerProvider>
     </div>
   );
 }
