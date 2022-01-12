@@ -1,7 +1,8 @@
 import React, { Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Outlet } from 'react-router-dom';
 import { ContentManagerProvider } from './context/ContentManagerContext';
 import Home from './pages/Home/Home';
+import Search from './pages/Search/Search';
 
 import './scss/site.scss';
 
@@ -16,9 +17,9 @@ const Series = React.lazy(
 function App() {
   return (
     <div className="app">
-      <ContentManagerProvider>
-        <Routes>
-          <Route path="/" element={<Home />} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="search" element={<Search />}>
           <Route
             path="movies"
             element={
@@ -27,6 +28,7 @@ function App() {
               </Suspense>
             }
           />
+
           <Route
             path="series"
             element={
@@ -35,8 +37,8 @@ function App() {
               </Suspense>
             }
           />
-        </Routes>
-      </ContentManagerProvider>
+        </Route>
+      </Routes>
     </div>
   );
 }

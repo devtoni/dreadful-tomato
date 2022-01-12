@@ -9,13 +9,13 @@ function Navigation() {
     <nav className="navigation">
       <ul className="navigation__list" aria-label="navigation list">
         <li className="navigation__list-item">
-          <NavLink to="/movies">
+          <NavLink to="movies">
             <img src={IconMovies} alt="icon movies" />
             Movies
           </NavLink>
         </li>
         <li className="navigation__list-item">
-          <NavLink to="/series">
+          <NavLink to="series">
             <img src={IconSeries} alt="icon series" />
             Series
           </NavLink>

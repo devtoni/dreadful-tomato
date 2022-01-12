@@ -1,15 +1,14 @@
 import Finder from '../../components/Finder/Finder';
-import Footer from '../../components/Footer/Footer';
-import Header from '../../components/Header/Header';
+import { useContentManagerContext } from '../../context/ContentManagerContext';
 
 function Movies() {
+  const { content } = useContentManagerContext();
+
+  console.log({ contentFromMovies: content });
+
   return (
     <>
-      <Header>
-        <Header.Navigation />
-      </Header>
       <Finder />
-      <Footer />
     </>
   );
 }
