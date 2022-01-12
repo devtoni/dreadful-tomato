@@ -13,9 +13,9 @@ describe('DateYearPicker', () => {
   });
 
   it('should display the year we pass as selected', () => {
-    const date = new Date('2022');
-    const expectedInputValue = String(date.getFullYear())
-    render(<DateYearPicker onChange={() => {}} selected={date} placeholderText="1900-2022" />);
+    const year = new Date('2022').getFullYear();
+    const expectedInputValue = String(year)
+    render(<DateYearPicker onChange={() => {}} selected={year} placeholderText="1900-2022" />);
 
     const input = screen.getByPlaceholderText('1900-2022') as HTMLInputElement;
 
@@ -42,6 +42,6 @@ describe('DateYearPicker', () => {
       await userEvent.click(firstYearBoxText);
     });
 
-    expect(onChangeSpy).toHaveBeenCalledWith(expect.any(Date));
+    expect(onChangeSpy).toHaveBeenCalledWith(Number(firstYearBoxText.textContent));
   });
 });
