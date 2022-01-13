@@ -4,26 +4,24 @@ import { ProgramTypeContent } from '../../types/MediaContent';
 import ContentList from '../ContentList/ContentList';
 import Pagination from '../Pagination/Pagination';
 
+import './grid-content.scss';
+
 type Props = {
   programType: ProgramTypeContent;
   title: string;
 };
 
 function GridContent({ programType, title }: Props) {
-  const { 
-    updateFilteredContent, 
-    filteredContent, 
-    contentLoaded, 
-    pagination 
-  } = useContentManagerContext();
+  const { updateFilteredContent, filteredContent, contentLoaded, pagination } =
+    useContentManagerContext();
 
   useEffect(() => {
     updateFilteredContent({ programType });
   }, [contentLoaded]);
 
   return (
-    <div>
-      {filteredContent ? (
+    <div className="grid-content">
+      {filteredContent?.entries.length ? (
         <>
           <h2>{title}</h2>
           <ContentList content={filteredContent.entries} />

@@ -6,7 +6,9 @@ function Home() {
   return (
     <>
       <Header />
-      <main>Here is the main content</main>
+      <main>
+        <Hero />
+      </main>
       <Footer />
     </>
   );
