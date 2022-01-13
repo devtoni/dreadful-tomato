@@ -22,8 +22,8 @@ function Header({ children }: Props) {
             </Link>
           </h1>
         </div>
-        <div className="bx--col header__section">{children}</div>
-        <div className="bx--col bx--offset-lg-3 header__section">
+        <div className="bx--col-lg-6 header__section">{children}</div>
+        <div className="bx--col header__section">
           <div className="bx--row">
             <div className="bx--col">
               <Button>
