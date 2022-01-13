@@ -12,7 +12,7 @@ function Movies() {
           updateFilteredContent({ programType: 'movie', searchByTitle, releaseYear })
         }
       />
-      <main className="bx--grid">{contentLoaded && <GridContent programType="series" title="Popular Movies" />}</main>
+      <main className="bx--grid">{contentLoaded && <GridContent programType="movie" title="Popular Movies" />}</main>
     </>
   );
 }

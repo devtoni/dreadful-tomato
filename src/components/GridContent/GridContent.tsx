@@ -21,7 +21,7 @@ function GridContent({ programType, title }: Props) {
 
   return (
     <div className="grid-content">
-      {filteredContent?.entries.length ? (
+      {contentLoaded && filteredContent?.entries.length ? (
         <>
           <h2>{title}</h2>
           <ContentList content={filteredContent.entries} />

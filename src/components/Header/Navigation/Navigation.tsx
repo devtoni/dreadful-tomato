@@ -26,8 +26,8 @@ function Navigation({ children }: Props) {
           </NavLink>
         </li>
         {children &&
-          Children.toArray(children).map((child) => (
-            <li className="navigation__list-item">
+          Children.toArray(children).map((child, idx) => (
+            <li key={idx} className="navigation__list-item">
               {child}
             </li>
           ))}

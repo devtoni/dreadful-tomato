@@ -46,8 +46,14 @@ const ContentManagerProvider = ({ children }: ContentManagerProviderProps) => {
       .then(() => setContentIsLoaded(true));
   }, []);
 
-  const updateFilteredContent = ({ programType, searchByTitle, releaseYear, pageNumber = 1 }: FilterQueryContent) => {
-  
+  const updateFilteredContent = ({
+    programType,
+    searchByTitle,
+    releaseYear,
+    pageNumber = 1
+  }: FilterQueryContent) => {
+    setContentIsLoaded(false);
+
     const searchByTitleToLowerCase = searchByTitle?.toLowerCase() || '';
 
     const filteredData = content.entries
@@ -66,6 +72,8 @@ const ContentManagerProvider = ({ children }: ContentManagerProviderProps) => {
       itemsPerPage: ITEMS_PER_PAGE,
       currentPage: pageNumber
     });
+
+    setContentIsLoaded(true);
   };
 
   return (

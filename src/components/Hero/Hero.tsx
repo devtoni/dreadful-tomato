@@ -16,7 +16,7 @@ function Hero() {
         </div>
       </Link>
 
-      <Link to="/search/movies">
+      <Link to="/search/series">
         <div className="hero__block">
           <div className="hero-image__container">
             <img src={SeriesImage} alt="Series image" />
