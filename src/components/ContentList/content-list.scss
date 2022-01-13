@@ -1,6 +1,6 @@
 .content-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    max-width: fit-content;
+    width: 100%;
     height: 100%;
 }

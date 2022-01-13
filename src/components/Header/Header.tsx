@@ -22,7 +22,7 @@ function Header({ children }: Props) {
             </Link>
           </h1>
         </div>
-        <div className="bx--col-lg-6 header__section">{children}</div>
+        {children && <div className="bx--col-lg-6 header__section">{children}</div>}
         <div className="bx--col header__section">
           <div className="bx--row">
             <div className="bx--col">
